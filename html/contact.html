@@ -5,44 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/contact.css">
-    <script src="../js/contact.js  defer"></script>
+    <script src="../js/contact.js" defer></script>
     <title>Contact</title>
 </head>
 
 <body>
     <header>
-        <p  class="entete">
-           <span class="logo">
-            jeu de dé
-           </span> 
-         <a href="../index.html">accueil</a></p>
+        <div class="img1">
+            <img src="img" alt="image de dé yes">
+        </div>
+        <div class="img2"></div>
+        <img src="img/de2.png" alt="image de dé play">
+        </div>
+        <p class="entete">
+            <span class="logo">
+                jeu de dé
+            </span>
+            <a href="../index.html">Retour à accueil</a>
         </p>
-        
     </header>
     <main>
+        <br><br>
+        <div class="titreforulaire">
+            <h1>Formulaire de contact</h1><br><br>
+        </div>
+
         <div class="container">
             <form action="contact.html">
-                <label for="fname">Nom</label>
-                <input type="text" id="fname" name="firstname" placeholder="Veuiller écrire vôtre nom">
+                <label for="lastname ">Nom :</label>
+                <input type="text" id="lastname" name="lastname" required placeholder="Veuiller écrire vôtre nom">
+                <p>Votre nom doit contenier 5- 12 caracters</p><br><br>
 
-                <label for="lname">Prénom</label>
-                <input type="text" id="lname" name="lastname" placeholder="Veuiller écrire vôtre Prénom">
+                <label for="firstname">Prénom :</label>
+                <input type="text" id="firstname" name="firstname" required="Veuiller écrire vôtre Prénom">
+                <p>Votre prénom doit contenier 5- 12 caracters</p><br><br>
 
-                <label for="Email">Email</label>
-                <input type="text" id="lname" name="lastname" placeholder="Veuiller écrire vôtre Email">
+                <label for="email">Email :</label>
+                <input type="text" id="email" name="email" required placeholder="Veuiller écrire vôtre email">
+                <p>Votre e-mail n'est pas valide ex. assofac@.com</p><br><br>
 
-                <label for="subject">Méssage</label>
-                <textarea id="subject" name="subject" placeholder="Veuiller écrire vôtre méssage"></textarea>
-                <input type="submit" value="Envoyer">
-
+                <label for="Message">Méssage :</label>
+                <textarea id="message" name="message" required
+                    placeholder="Veuiller écrire vôtre méssage"></textarea><br><br>
+                <input type="submit" value="Envoyer"><br><br>
             </form>
         </div>
     </main>
-
     <footer>
-        <p>Pour toute question à propose de mon jeu de dé <a href="contact.html">contacter-moi</a></p>
-
-            
+        <p class="centrertext">Pour toute question à propose de mon jeu de dé <a href="contact.html">contacter-moi</a>
+        </p>
     </footer>
 </body>
 

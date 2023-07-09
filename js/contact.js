@@ -1,13 +1,14 @@
 
-// pour faire le regex
+// pour faire le regex ici (on utilise html,css,js)
 
+// Récupérer les valeurs saisies dans les champs du formulaire
 const inputs = document.querySelectorAll('input');
 
 
 const patterns = {
-    fistname: /^[a-z\d]{5,15}$/i,
-    email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
-    telephone: /^\d{10}$/,
+    lastname: /^[a-z\d]{5,15}$/i,
+    firstname: /^[a-z\d]{5,15}$/i,
+    email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/
 };
 
 const validate = (field, regex) => {

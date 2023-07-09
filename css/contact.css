@@ -8,25 +8,42 @@
   font-style: normal;
   text-decoration: none;
 }
+img {
+  width : 30vw;
+  height : 10vh;
+  }
+
+.titreforulaire{
+  text-align:center;
+  font-size:20px;
+}
+
+
+.logo{
+  
+  font-size:30px;
+}
 
 header {
-  background-color:black;
+  background-color:pink;
   height: 100px;
   margin: 0;
-  color: white;
+  color: black;
   text-align: center;
+  
 }
 
 .entete {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-content: center;
   justify-content: center;
   height: 100%;
 }
 header a {
-  color: #fff;
+  color: black;
+  text-align: end;
+  flex-wrap: wrap;
+  padding: 10px;
 }
 input[type="text"],
 select,
@@ -40,6 +57,18 @@ textarea {
   margin-bottom: 16px;
   resize: vertical;
   /* La propriété resize permet de contrôler le caractère redimensionnable d'un élément et notamment la direction dans laquelle celui-ci peut être redimensionné. */
+}
+
+input[type="email"]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+    
 }
 input[type="submit"] {
   background-color: #04aa6d;
@@ -61,15 +90,45 @@ input[type="submit"]:hover {
   padding: 20px;
 }
 
-footer {
-  background-color: red;
-  height: 100px;
-  margin: 0;
-  padding: 30px;
+/*  debut pour validé ou non le forumulaire = regex */
+.valide {
+  border-color: green;
 }
 
-footer p,
+ input 
+ .invalide {
+  border-color: crimson;
+}
+
+ .invalide + p {
+  font-weight: bold;
+  color: crimson;
+}
+
+.valide + p {
+  display: none;
+} 
+/*Fin pour validé ou non le forumulaire = regex */
+
+footer {
+  background-color:pink;
+  height: 100px;
+  margin: 0;
+  padding: 10px;
+}
+
+footer 
 a {
-  color: white;
+  color: black;
   text-align: center;
+  font-size: 20px;
+  
+}
+
+.centrertext {
+  color: black;
+  text-align: center;
+  font-size: 20px;
+padding: 30px;
+  
 }
