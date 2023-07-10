@@ -50,10 +50,10 @@ header {
   text-align: center;
 }
 .joueur1 {
-  background-color: rgb(53, 26, 204);
+  background-color:rgb(163, 22, 83);
 }
 .joueur2 {
-  background-color: rgb(255, 0, 149);
+  background-color:rgb(163, 22, 83);
 }
 .joueur {
   display: flex;
@@ -69,7 +69,7 @@ header {
 .btn2 {
   font-weight: bold;
   border: solid;
-  background-color: white;
+  background-color:pink;
   padding: 10px;
   margin-top: 70px;
   border-radius: 10px;
@@ -80,9 +80,14 @@ header {
   border: 2px solid black;
   font-size: 1rem;
   margin: 100px 600px 0px;
+  margin-bottom: 70px;
 }
 .mainrègle {
   font-weight: bold;
   font-size: 30px;
+}
+/* caché le dé au débutdu jeu */
+.cacher{
+  display: none;
 }
 
