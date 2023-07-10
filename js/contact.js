@@ -6,8 +6,8 @@ const inputs = document.querySelectorAll('input');
 
 
 const patterns = {
-    lastname: /^[a-z\d]{5,15}$/i,
-    firstname: /^[a-z\d]{5,15}$/i,
+    lastname: /^[a-z\d ]{5,15}$/i,
+    firstname: /^[a-z\d ]{5,15}$/i,
     email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/
 };
 
