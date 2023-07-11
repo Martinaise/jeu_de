@@ -8,21 +8,18 @@
   font-style: normal;
 }
 
-.titreforulaire{
-  text-align:center;
-  font-size:20px;
+.titreforulaire {
+  text-align: center;
+  font-size: 20px;
 }
 
-
 header {
-  background-color:pink;
+  background-color: pink;
   height: 100px;
   margin: 0;
   color: black;
   text-align: center;
-  
 }
-
 
 header a {
   color: black;
@@ -41,10 +38,12 @@ textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-  /* La propriété resize permet de contrôler le caractère redimensionnable d'un élément et notamment la direction dans laquelle celui-ci peut être redimensionné. */
+  /* La propriété resize permet de contrôler le caractère 
+  redimensionnable d'un élément et notamment la direction dans 
+  laquelle celui-ci peut être redimensionné. */
 }
 
-input[type="email"]{
+input[type="email"] {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -53,7 +52,6 @@ input[type="email"]{
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-    
 }
 input[type="submit"] {
   background-color: pink;
@@ -64,57 +62,49 @@ input[type="submit"] {
   cursor: pointer;
   /* pour avoir une main quand on est sur envoyer */
 }
-
 input[type="submit"]:hover {
   background-color: rgb(193, 91, 127);
 }
-
 .container {
   width: 500px;
   margin: 0 auto;
   border-radius: 5px;
-  padding: 20px;
+  padding: 70px;
 }
-
 /*  debut pour validé ou non le forumulaire = regex */
 .valide {
   border-color: green;
 }
-
- input 
- .invalide {
+input .invalide {
   border-color: crimson;
 }
 
- .invalide + p {
+.invalide + p {
   font-weight: bold;
   color: crimson;
 }
 
 .valide + p {
   display: none;
-} 
+}
 /*Fin pour validé ou non le forumulaire = regex */
 
 footer {
-  background-color:pink;
+  background-color: pink;
   height: 100px;
   margin: 0;
   padding: 10px;
 }
 
-footer 
-a {
+footer a {
   color: black;
   text-align: center;
   font-size: 20px;
-  
 }
 
 .centrertext {
   color: black;
   text-align: center;
   font-size: 20px;
-padding: 30px;
-  
+  padding: 30px;
 }

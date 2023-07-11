@@ -1,94 +1,92 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jeu de dé</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/contact.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <script src="./js/index.js" defer></script>
-  </head>
 
-  <body>
-    <header>
-      <div class="headercontainer">
-        <div class="headerimage"><img src="img/de1.png" alt="image yes" /></div>
-        <p class="jeudede">Jeu de dé</p>
-        <div class="headerimage">
-          <img src="img/de2.png" alt="image play " />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jeu de dé</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="./js/index.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="headercontainer">
+      <div class="headerimage"><img src="img/de1.png" alt="image yes" /></div>
+      <p class="jeudede">Jeu de dé</p>
+      <div class="headerimage">
+        <img src="img/de2.png" alt="image play " />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="containerbtnnew">
+      <button class="newbtn" id="btnnewgame">nouvelle partie</button>
+    </div>
+    <p class="textwinner cachertextwinner">youpi <span class="winner"></span>vous avez gagné.Bravo !</p>
+    <div class="diceimage">
+      <!-- on met une classe ici pour automatiser pour mettre le dé correspondant au chiffre -->
+      <img class="dice" src="img/dice_1.png" alt="image de dé " />
+    </div>
+    <div class="containerplayers">
+      <section class="containerjouer player1 joeur-actif joueur1">
+        <div class="joueur">
+          <p class="choixjouer joueurgauche" id="joueur1">joueur 1 <span class="j0"></span></p>
+          <p id="score-round0">Round : <span class="round0"></span></p>
+          <p class="global0">Global: <spa id="score-global0"></spa>
+          </p>
         </div>
-      </div>
-    </header>
-
-    <main>
-      <div class="containerbtnnew">
-        <button class="newbtn" id="btnnewgame">nouvelle partie</button>
-      </div>
-      <p class="textwinner cachertextwinner">youpi <span class="winner"></span>vous avez gagné.Bravo !</p>
-      <div class="diceimage">
-        <!-- on met une classe ici pour automatiser pour mettre le dé correspondant au chiffre -->
-        <img class="dice" src="img/dice_1.png" alt="image de dé " />
-      </div>
-      <div class="containerplayers">
-        <section class="containerjouer player1 joeur-actif joueur1">
-          <div class="joueur">
-            <p class="choixjouer joueurgauche" id="joueur1">joueur 1 <span class="j0"></span></p>
-            <p id="score-round0">Round : <span class="round0"></span></p>
-            <p class="global0">Global: <spa id="score-global0"></spa></p>
-          </div>
-        </section>
-
-        <div>
-          <button class="btn1 info">Lancer</button>
-          <button class="btn2 info">Hold</button>
-        </div>
-
-        <section class="containerjouer player2">
-          <div class="joueur joueur2">
-            <p class="choixjouer joueurdroite" id="joueur1">joueur 2 <span class="j1"></span></p>
-            <p id="score-round1">Round : <span class="round1"></span></p>
-            <p class="global1">Global:<span id="score-global1"></span></p>
-          </div>
-        </section>
-      </div>
-
-      <section class="regledujeu">
-        <p class="mainrègle">Règles du jeu</p>
-
-        <p>
-          2joueurs chaque joueur possède un score temporaire (ROUND).et un score
-          global (GLOBAL).
-        </p>
-        <p>
-          À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un
-          dé autant de fois qu'il le souhaite.
-        </p>
-        <p>
-          Le résultat d’un lancer est ajouté au ROUND. Lors de son tour, le
-          joueur peut décider à tout moment de:
-        </p>
-        <p>
-          Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND
-          vers le GLOBAL. Ce sera alors le tour de l’autre joueur.
-        </p>
-        <p>
-          Lancer le dé. Si vous obtientez un 1, vôtre score ROUND est perdu et
-          c’est la fin de vôtre tour.
-        </p>
-        <p>
-          Le premier joueur qui atteint les 100 points sur global gagne le jeu.
-        </p>
       </section>
-    </main>
-    <footer>
-      <p class="centrertext">
-        Pour toute question à propose de mon jeu de dé
-        <a href="./html/contact.html">contacter-moi</a>
+
+      <div>
+        <button class="btn1 info">Lancer</button>
+        <button class="btn2 info">Hold</button>
+      </div>
+
+      <section class="containerjouer player2">
+        <div class="joueur joueur2">
+          <p class="choixjouer joueurdroite" id="joueur1">joueur 2 <span class="j1"></span></p>
+          <p id="score-round1">Round : <span class="round1"></span></p>
+          <p class="global1">Global:<span id="score-global1"></span></p>
+        </div>
+      </section>
+    </div>
+
+    <section class="regledujeu">
+      <h2 class="mainregle">Règles du jeu</h2>
+      <p>
+        2joueurs chaque joueur possède un score temporaire (ROUND).et un score
+        global (GLOBAL)</p>
+      <p>
+        À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un
+        dé autant de fois qu'il le souhaite.
       </p>
-    </footer>
-  </body>
+      <p>
+        Le résultat d’un lancer est ajouté au ROUND. Lors de son tour, le
+        joueur peut décider à tout moment de:
+      </p>
+      <p>
+        Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND
+        vers le GLOBAL. Ce sera alors le tour de l’autre joueur.
+      </p>
+      <p>
+        Lancer le dé. Si vous obtientez un 1, vôtre score ROUND est perdu et
+        c’est la fin de vôtre tour.
+      </p>
+      <p>
+        Le premier joueur qui atteint les 100 points sur global gagne le jeu.
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p class="centrertext">
+      Pour toute question à propose de mon jeu de dé
+      <a href="./html/contact.html">contacter-moi</a>
+    </p>
+  </footer>
+</body>
+
 </html>

@@ -1,8 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
   box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
 }
 header {
   height: 150px;
@@ -80,11 +83,15 @@ header {
 .regledujeu {
   border: 2px solid black;
   font-size: 1rem;
-  margin: 100px 600px 0px;
-  margin-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: start;
 }
 .mainregle {
-  font-weight: bold;
+  padding: 20px;
   font-size: 30px;
 }
 /* caché le dé au débutdu jeu */
@@ -95,9 +102,8 @@ header {
 .joueur1 {
   background-color: rgba(255, 255, 255, 0.4);
 }
-
 .containerbtnnew {
-  width: 100px;
+  width: 70px;
   margin: 10px auto 0 auto;
 }
 /* pour mettre la pastille rouge pour montrer le jouer qui est entrain de jouer */
@@ -114,6 +120,6 @@ header {
   font-size: 4rem;
   color: green;
 }
-.cachertextwinner{
+.cachertextwinner {
   display: none;
 }
