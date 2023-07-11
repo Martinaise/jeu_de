@@ -123,3 +123,11 @@ header {
 .cachertextwinner {
   display: none;
 }
+
+
+@media screen and (max-width: 430px) {
+  .container {
+    width: 350px;
+    
+  }
+}
