@@ -25,14 +25,18 @@
     </header>
 
     <main>
+      <div class="containerbtnnew">
+        <button class="newbtn" id="btnnewgame">nouvelle partie</button>
+      </div>
+
       <div class="diceimage">
         <!-- on met une classe ici pour automatiser pour mettre le dé correspondant au chiffre -->
         <img class="dice" src="img/dice_1.png" alt="image de dé " />
       </div>
       <div class="containerplayers">
         <section class="containerjouer player1 joeur-actif joueur1">
-          <div class="joueur  ">
-            <p class="choixjouer joueurgauche" id="joueur1">joueur1</p>
+          <div class="joueur">
+            <p class="choixjouer joueurgauche" id="joueur1">joueur 1 <span class="j0"></span></p>
             <p id="score-round0">Round : <span class="round0"></span></p>
             <p class="global0">Global: <spa id="score-global0"></spa></p>
           </div>
@@ -45,9 +49,9 @@
 
         <section class="containerjouer player2">
           <div class="joueur joueur2">
-            <p class="choixjouer joueurdroite" id="joueur1">joueur2</p>
+            <p class="choixjouer joueurdroite" id="joueur1">joueur 2 <span class="j1"></span></p>
             <p id="score-round1">Round : <span class="round1"></span></p>
-            <p class="global1"> Global:<span id="score-global1"></span></p>
+            <p class="global1">Global:<span id="score-global1"></span></p>
           </div>
         </section>
       </div>

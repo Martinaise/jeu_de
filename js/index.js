@@ -6,10 +6,13 @@ const scoreglobal0 = document.getElementById("score-global0");
 const scoreglobal1 = document.getElementById("score-global1");
 const round0 = document.querySelector(".round0");
 const round1 = document.querySelector(".round1");
+const pastillej0 = document.querySelector(".j0")
+const pastillej1 = document.querySelector(".j1")
 
+const btn1lancerdede = document.querySelector(".btn1");
+const btn2Hold = document.querySelector(".btn2");
+const btnnewgame = document.querySelector("#btnnewgame")
 
-let btn1lancerdede = document.querySelector(".btn1");
-let btn2Hold = document.querySelector(".btn2");
 let dice = document.querySelector(".dice");
 
 let scorejoueur1et2;
@@ -33,8 +36,8 @@ function initiation() {
     dice.classList.add("cacher");
     joueurgauche.classList.remove('player--winner');
     joueurdroite.classList.remove('player--winner');
-    joueurgauche.classList.add('player--active');
-    joueurdroite.classList.remove('player--active');
+    pastillej0.classList.add('active-player');
+    pastillej1.classList.remove('active-player');
 }
 initiation();
 
@@ -44,9 +47,8 @@ const switchPlayer = function () {
     document.querySelector(`.round${jouerquijoue}`).textContent = 0;
     scoretemporaire = 0;
     jouerquijoue = jouerquijoue === 0 ? 1 : 0;
-    console.log("jouerquijoue", jouerquijoue)
-    joueurgauche.classList.toggle('player--active');
-    joueurdroite.classList.toggle('player--active');
+    pastillej0.classList.toggle('active-player');
+    pastillej1.classList.toggle('active-player');
 
 };
 
@@ -84,10 +86,15 @@ btn2Hold.addEventListener("click", function () {
         //changement de score global visuellement
         document.querySelector(`#score-global${jouerquijoue}`).textContent =
             scorejoueur1et2[jouerquijoue];
-            
+        if (scorejoueur1et2[jouerquijoue] >= 100) {
+            jeuencour = false
+            dice.classList.add("cacher")
+        } else {
+            switchPlayer()
+        }
     }
 
 })
-
-
+//pour lancer une nouvelle partie de jeu
+btnnewgame.addEventListener("click", initiation)
 
