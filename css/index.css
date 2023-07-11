@@ -82,7 +82,7 @@ header {
   margin: 100px 600px 0px;
   margin-bottom: 70px;
 }
-.mainrègle {
+.mainregle {
   font-weight: bold;
   font-size: 30px;
 }
@@ -90,4 +90,8 @@ header {
 .cacher{
   display: none;
 }
+/* le jouer qui est entrain de jouer prend ce background */
+.joueur1{
+  background-color: rgba(255, 255, 255, 0.4) ;
+};
 

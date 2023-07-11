@@ -1,11 +1,12 @@
 "use strict";
 
-const joueurgauche = document.querySelector(".joueurgauche");
-const joueurdroite = document.querySelector(".joueurdroite");
-const scoreglobal1 = document.getElementById("#score-global1");
-const scoreglobal2 = document.getElementById("#score-global2");
+const joueurgauche = document.querySelector(".player1");
+console.log(joueurgauche)
+const joueurdroite = document.querySelector(".player2");
+const scoreglobal0 = document.getElementById("score-global0");
+const scoreglobal1 = document.getElementById("score-global1");
+const round0 = document.querySelector(".round0");
 const round1 = document.querySelector(".round1");
-const round2 = document.querySelector(".round2");
 
 
 let btn1lancerdede = document.querySelector(".btn1");
@@ -22,33 +23,56 @@ function initiation() {
     scoretemporaire = 0;
     jouerquijoue = 0;
     jeuencour = 0;
-    playing=true;
+    jeuencour = true;
 
+    scoreglobal0.textContent = 0;
     scoreglobal1.textContent = 0;
-    scoreglobal2.textContent = 0;
+    round0.textContent = 0;
     round1.textContent = 0;
-    round2.textContent = 0;
 
-dice.classList.add("cacher");
-joueurgauche.classList.remove('player--winner');
-joueurdroite.classList.remove('player--winner');
-joueurgauche.classList.add('player--active');
-joueurdroite.classList.remove('player--active');
-
-
+    dice.classList.add("cacher");
+    joueurgauche.classList.remove('player--winner');
+    joueurdroite.classList.remove('player--winner');
+    joueurgauche.classList.add('player--active');
+    joueurdroite.classList.remove('player--active');
 }
+initiation();
 
 
+// funcction qui permet de changer le joueur
+const switchPlayer = function () {
+    document.querySelector(`.round${jouerquijoue}`).textContent = 0;
+    scoretemporaire = 0;
+    jouerquijoue = jouerquijoue === 0 ? 1 : 0;
+    joueurgauche.classList.toggle('player--active');
+    joueurdroite.classList.toggle('player--active');
 
-
+};
 
 // on ajoute un evenement sur le boutton de lancer de dé avec une fonction callback qui permet de s'éxecuter quand on click sur le boutton
 btn1lancerdede.addEventListener('click', function () {
-    dice.classList.remove('cacher')
-    // on ajoute 1  pour ne pas avoir 0 car pas de Zéro un dé et pour avoir 6 en max.
-    const lechiffredudelance = Math.floor(Math.random() * 6 + 1);
-    dice.src = `../img/dice_${lechiffredudelance}.png`
+    // on fait une condition pour savoir si il y'a une partie en cours
+    if (jeuencour) {
+        // on ajoute 1  pour ne pas avoir 0 car pas de Zéro un dé et pour avoir 6 en max.
+        const lechiffredudelance = Math.floor(Math.random() * 6 + 1);
+        dice.classList.remove('cacher')
+        dice.src = `../img/dice_${lechiffredudelance}.png`
+
+        // vérifier si la valeur du dé lancée est différente de 1
+        // si elle est différente de 1 on augmente le score temporaire.
+        // sinon on change de joueur
+        if (lechiffredudelance !== 1) {
+            scoretemporaire += lechiffredudelance
+            // on change le score temporaire à la vollé dans le html
+            document.querySelector(`.round${jouerquijoue}`).textContent = scoretemporaire;
+        } else {
+            switchPlayer();
+        }
+
+    }
+
 })
+
 
 
 
