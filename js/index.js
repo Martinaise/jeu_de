@@ -6,8 +6,9 @@ const scoreglobal0 = document.getElementById("score-global0");
 const scoreglobal1 = document.getElementById("score-global1");
 const round0 = document.querySelector(".round0");
 const round1 = document.querySelector(".round1");
-const pastillej0 = document.querySelector(".j0")
-const pastillej1 = document.querySelector(".j1")
+const pastillej0 = document.querySelector(".j0");
+const pastillej1 = document.querySelector(".j1");
+const textwinner = document.querySelector(".textwinner");
 
 const btn1lancerdede = document.querySelector(".btn1");
 const btn2Hold = document.querySelector(".btn2");
@@ -38,6 +39,7 @@ function initiation() {
     joueurdroite.classList.remove('player--winner');
     pastillej0.classList.add('active-player');
     pastillej1.classList.remove('active-player');
+    textwinner.classList.add("cachertextwinner")
 }
 initiation();
 
@@ -86,9 +88,13 @@ btn2Hold.addEventListener("click", function () {
         //changement de score global visuellement
         document.querySelector(`#score-global${jouerquijoue}`).textContent =
             scorejoueur1et2[jouerquijoue];
-        if (scorejoueur1et2[jouerquijoue] >= 100) {
+        if (scorejoueur1et2[jouerquijoue] >= 10) {
             jeuencour = false
             dice.classList.add("cacher")
+            textwinner.classList.remove("cachertextwinner")
+            let joueurtemp = jouerquijoue === 0 ? 1 : 2;
+
+            document.querySelector(".winner").textContent = `joueur ${joueurtemp} `
         } else {
             switchPlayer()
         }
