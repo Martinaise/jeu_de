@@ -88,7 +88,7 @@ btn2Hold.addEventListener("click", function () {
         //changement de score global visuellement
         document.querySelector(`#score-global${jouerquijoue}`).textContent =
             scorejoueur1et2[jouerquijoue];
-        if (scorejoueur1et2[jouerquijoue] >= 10) {
+        if (scorejoueur1et2[jouerquijoue] >= 100) {
             jeuencour = false
             dice.classList.add("cacher")
             textwinner.classList.remove("cachertextwinner")
