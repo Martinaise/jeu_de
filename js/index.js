@@ -1,7 +1,6 @@
 "use strict";
 
 const joueurgauche = document.querySelector(".player1");
-console.log(joueurgauche)
 const joueurdroite = document.querySelector(".player2");
 const scoreglobal0 = document.getElementById("score-global0");
 const scoreglobal1 = document.getElementById("score-global1");
@@ -10,6 +9,7 @@ const round1 = document.querySelector(".round1");
 
 
 let btn1lancerdede = document.querySelector(".btn1");
+let btn2Hold = document.querySelector(".btn2");
 let dice = document.querySelector(".dice");
 
 let scorejoueur1et2;
@@ -44,6 +44,7 @@ const switchPlayer = function () {
     document.querySelector(`.round${jouerquijoue}`).textContent = 0;
     scoretemporaire = 0;
     jouerquijoue = jouerquijoue === 0 ? 1 : 0;
+    console.log("jouerquijoue", jouerquijoue)
     joueurgauche.classList.toggle('player--active');
     joueurdroite.classList.toggle('player--active');
 
@@ -71,8 +72,22 @@ btn1lancerdede.addEventListener('click', function () {
 
     }
 
-})
+});
+// on rajoute un evement clik sur hold
+btn2Hold.addEventListener("click", function () {
+    //   je verifie si le jeu est en cours  
+    if (jeuencour) {
+        //changement de score global dans le tableau  on ajoute le score temporaire au score global et on stock
+        scorejoueur1et2[jouerquijoue] += scoretemporaire;
+        // exemple  scorejoueur1et2[1] = scorejoueur1et2[1] + scoretemporaire
 
+        //changement de score global visuellement
+        document.querySelector(`#score-global${jouerquijoue}`).textContent =
+            scorejoueur1et2[jouerquijoue];
+            
+    }
+
+})
 
 
 
